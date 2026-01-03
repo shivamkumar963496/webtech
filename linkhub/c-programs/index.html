@@ -6,77 +6,114 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-    body{
-        margin:0;
-        min-height:100vh;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        background:linear-gradient(135deg,#667eea,#764ba2);
-        font-family:Arial, Helvetica, sans-serif;
-    }
+*{
+    box-sizing:border-box;
+}
 
-    .container{
-        background:#fff;
-        width:90%;
-        max-width:420px;
-        padding:25px;
-        border-radius:15px;
-        box-shadow:0 15px 35px rgba(0,0,0,0.3);
-        text-align:center;
-    }
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-    h1{
-        margin-top:0;
-        margin-bottom:20px;
-        color:#333;
-    }
+/* MAIN CARD */
+.container{
+    background:#fff;
+    width:95%;
+    max-width:700px;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+}
 
-    .btn{
-        display:block;
-        margin:12px 0;
-        padding:14px;
-        background:#2196f3;
-        color:white;
-        text-decoration:none;
-        font-size:16px;
-        font-weight:bold;
-        border-radius:10px;
-        box-shadow:0 6px 0 #0b5ed7;
-        transition:0.2s;
-    }
+/* HEADER */
+.header{
+    text-align:center;
+    margin-bottom:25px;
+}
 
-    /* 3D EFFECT */
-    .btn:hover{
-        background:#1e88e5;
-    }
+.header img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #2196f3;
+}
 
-    .btn:active{
-        box-shadow:0 2px 0 #0b5ed7;
-        transform:translateY(4px);
-    }
+.header h1{
+    margin:12px 0 5px;
+    color:#333;
+}
+
+.header p{
+    margin:0;
+    font-weight:bold;
+    color:#555;
+}
+
+/* BUTTON GRID */
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
+    gap:15px;
+}
+
+/* BUTTON STYLE */
+.btn{
+    padding:15px;
+    background:#2196f3;
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:bold;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 6px 0 #0b5ed7;
+    transition:0.2s;
+}
+
+.btn:hover{
+    background:#1e88e5;
+}
+
+.btn:active{
+    box-shadow:0 2px 0 #0b5ed7;
+    transform:translateY(4px);
+}
 </style>
 </head>
 
 <body>
 
 <div class="container">
-    <h1>📘 C Programming</h1>
 
-    <a href="unit-1.html" class="btn">Unit – 1</a>
-    <a href="loops/for-loops" class="btn">loops</a>
-    <a href="unit-3-pattern.html" class="btn">Unit–3-pattern-printing</a>
-    <a href="#" class="btn">Unit – 4</a>
-    <a href="#" class="btn">Unit – 5</a>
-    <a href="#" class="btn">Unit – 6</a>
-    <a href="#" class="btn">Unit – 7</a>
-    <a href="#" class="btn">Unit – 8</a>
-    <a href="#" class="btn">Unit – 9</a>
-    <a href="#" class="btn">Unit – 10</a>
+    <!-- HEADER -->
+    <div class="header">
+        <!-- apni image ka naam yaha likhna -->
+        <img src="profile.png" alt="Profile Photo">
+        <h1>C PROGRAMMING</h1>
+        <p>{ SHIVAM KUMAR }</p>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+        <a href="unit-1.html" class="btn">Unit – 1</a>
+        <a href="loops/for-loops" class="btn">Loops</a>
+        <a href="unit-3-pattern.html" class="btn">Pattern Printing</a>
+        <a href="#" class="btn">Unit – 4</a>
+        <a href="#" class="btn">Unit – 5</a>
+        <a href="#" class="btn">Unit – 6</a>
+        <a href="#" class="btn">Unit – 7</a>
+        <a href="#" class="btn">Unit – 8</a>
+        <a href="#" class="btn">Unit – 9</a>
+        <a href="#" class="btn">Unit – 10</a>
+    </div>
 
 </div>
 
 </body>
 </html>
-
-
