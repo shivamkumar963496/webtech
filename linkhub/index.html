@@ -12,7 +12,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family:'Segoe UI', sans-serif;
 }
 
 body{
@@ -27,7 +27,7 @@ body{
 /* CARD */
 .card{
     width:100%;
-    max-width:460px;
+    max-width:900px;
     background:rgba(255,255,255,0.12);
     backdrop-filter: blur(15px);
     border-radius:22px;
@@ -57,11 +57,11 @@ body{
     opacity:0.85;
 }
 
-/* SCROLL AREA */
+/* SCROLL AREA (AUTO SCROLLBAR) */
 .slider{
     margin-top:25px;
-    max-height:300px;
-    overflow-y:auto;
+    max-height:320px;        /* 🔥 height limit */
+    overflow-y:auto;         /* 🔥 auto scrollbar */
     padding-right:6px;
     scroll-behavior:smooth;
 }
@@ -75,29 +75,29 @@ body{
     border-radius:10px;
 }
 
-/* LINKS */
+/* GRID → 5 BUTTONS PER ROW */
 .links{
-    display:flex;
-    flex-direction:column;
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
     gap:14px;
 }
 
 /* BUTTON STYLE */
 .links a{
     text-decoration:none;
-    padding:15px;
+    padding:14px 10px;
     border-radius:16px;
-    font-size:16px;
+    font-size:14px;
     font-weight:500;
     color:#fff;
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:12px;
+    gap:8px;
     transition:0.35s;
 }
 
-/* COLOUR THEMES */
+/* COLOR THEMES */
 .portfolio{ background:linear-gradient(135deg,#ff512f,#f09819); }
 .projects { background:linear-gradient(135deg,#36d1dc,#5b86e5); }
 .shop     { background:linear-gradient(135deg,#f7971e,#ffd200); }
@@ -106,8 +106,22 @@ body{
 .default  { background:linear-gradient(135deg,#11998e,#38ef7d); }
 
 .links a:hover{
-    transform: translateY(-3px) scale(1.04);
+    transform: translateY(-3px) scale(1.05);
     filter: brightness(1.1);
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+    .links{ grid-template-columns: repeat(4,1fr); }
+}
+@media(max-width:800px){
+    .links{ grid-template-columns: repeat(3,1fr); }
+}
+@media(max-width:550px){
+    .links{ grid-template-columns: repeat(2,1fr); }
+}
+@media(max-width:360px){
+    .links{ grid-template-columns: 1fr; }
 }
 
 /* FOOTER */
@@ -115,11 +129,6 @@ footer{
     margin-top:20px;
     font-size:12px;
     opacity:0.75;
-}
-
-/* SMALL DEVICES */
-@media(max-width:360px){
-    .slider{ max-height:240px; }
 }
 </style>
 </head>
@@ -135,31 +144,31 @@ footer{
         <p>Web Developer • My Projects</p>
     </div>
 
-    <!-- LINKS (MANUAL SCROLL) -->
+    <!-- LINKS -->
     <div class="slider">
         <div class="links">
 
             <a class="portfolio" href="https://shivamkumar963496.github.io/portfolio/" target="_blank">
-                <i class="fa-solid fa-user"></i> Portfolio Website
+                <i class="fa-solid fa-user"></i> Portfolio
             </a>
 
             <a class="projects" href="https://shivamkumar963496.github.io/projects/" target="_blank">
-                <i class="fa-solid fa-code"></i> Web Projects
+                <i class="fa-solid fa-code"></i> Projects
             </a>
 
             <a class="shop" href="sweetshop/index.html" target="_blank">
-                <i class="fa-solid fa-shop"></i> Sweet Shop Website
+                <i class="fa-solid fa-shop"></i> Sweet Shop
             </a>
 
             <a class="beauty" href="beautycare/index.html" target="_blank">
-                <i class="fa-solid fa-dumbbell"></i>BEAUTY CARE
+                <i class="fa-solid fa-dumbbell"></i> Beauty Care
             </a>
 
             <a class="cprog" href="c-programs/" target="_blank">
                 <i class="fa-solid fa-terminal"></i> C Programs
             </a>
 
-            <!-- ADD MORE LINKS ANYTIME -->
+            <!-- FUTURE BUTTONS ADD HERE -->
             <!-- <a class="default" href="#">New Project</a> -->
 
         </div>
@@ -173,3 +182,4 @@ footer{
 
 </body>
 </html>
+
