@@ -1,72 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Unit 1 – C Programs</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Unit 1 – C Programs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body{
-            margin:0;
-            font-family: Arial, Helvetica, sans-serif;
-            background:#f4f6f8;
-            padding:20px;
-        }
+<style>
+    body{
+        margin:0;
+        font-family: Arial, Helvetica, sans-serif;
+        background:#f4f6f8;
+        padding:20px;
+    }
 
-        h1{
-            text-align:center;
-            color:#333;
-        }
+    h1{
+        text-align:center;
+        color:#333;
+        margin-bottom:25px;
+    }
 
-        .container{
-            max-width:600px;
-            margin:auto;
-        }
+    /* GRID CONTAINER → 5 BUTTONS PER ROW */
+    .container{
+        max-width:1200px;
+        margin:auto;
+        display:grid;
+        grid-template-columns: repeat(5, 1fr); /* 🔥 5 per row */
+        gap:15px;
+    }
 
-        .prog{
-            background:#ffffff;
-            margin:10px 0;
-            padding:12px;
-            border-radius:8px;
-            box-shadow:0 4px 10px rgba(0,0,0,0.1);
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-        }
+    .prog{
+        background:#ffffff;
+        padding:14px;
+        border-radius:10px;
+        box-shadow:0 4px 10px rgba(0,0,0,0.1);
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
 
-        .prog span{
-            font-weight:bold;
-        }
+    .prog span{
+        font-weight:bold;
+        color:#333;
+    }
 
-        .prog a{
-            text-decoration:none;
-            background:#007bff;
-            color:white;
-            padding:6px 12px;
-            border-radius:6px;
-            font-size:14px;
-        }
+    .prog a{
+        text-decoration:none;
+        background:#007bff;
+        color:white;
+        padding:6px 12px;
+        border-radius:6px;
+        font-size:14px;
+    }
 
-        .prog a:hover{
-            background:#0056b3;
-        }
+    .prog a:hover{
+        background:#0056b3;
+    }
 
-        .back{
-            display:block;
-            margin:20px auto;
-            width:200px;
-            text-align:center;
-            padding:10px;
-            background:#28a745;
-            color:white;
-            text-decoration:none;
-            border-radius:8px;
-        }
+    .back{
+        display:block;
+        margin:30px auto 0;
+        width:220px;
+        text-align:center;
+        padding:12px;
+        background:#28a745;
+        color:white;
+        text-decoration:none;
+        border-radius:8px;
+        font-weight:bold;
+    }
 
-        .back:hover{
-            background:#1e7e34;
-        }
-    </style>
+    .back:hover{
+        background:#1e7e34;
+    }
+
+    /* RESPONSIVE BREAKPOINTS */
+    @media(max-width:1100px){
+        .container{ grid-template-columns: repeat(4, 1fr); }
+    }
+    @media(max-width:900px){
+        .container{ grid-template-columns: repeat(3, 1fr); }
+    }
+    @media(max-width:600px){
+        .container{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media(max-width:400px){
+        .container{ grid-template-columns: 1fr; }
+    }
+</style>
 </head>
 
 <body>
@@ -74,155 +94,47 @@
 <h1>📘 Unit–1 : C Programming</h1>
 
 <div class="container">
-<div class="prog">
-    <span>Program 1</span>
-    <a href="unit-1/cp1.c">View Code</a>
+
+    <div class="prog"><span>Program 1</span><a href="unit-1/cp1.c">View</a></div>
+    <div class="prog"><span>Program 2</span><a href="unit-1/cp2.c">View</a></div>
+    <div class="prog"><span>Program 3</span><a href="unit-1/cp3.c">View</a></div>
+    <div class="prog"><span>Program 4</span><a href="unit-1/cp4.c">View</a></div>
+    <div class="prog"><span>Program 5</span><a href="unit-1/cp5.c">View</a></div>
+
+    <div class="prog"><span>Program 6</span><a href="unit-1/cp6.c">View</a></div>
+    <div class="prog"><span>Program 7</span><a href="unit-1/cp7.c">View</a></div>
+    <div class="prog"><span>Program 8</span><a href="unit-1/cp8.c">View</a></div>
+    <div class="prog"><span>Program 9</span><a href="unit-1/cp9.c">View</a></div>
+    <div class="prog"><span>Program 10</span><a href="unit-1/cp10.c">View</a></div>
+
+    <div class="prog"><span>Program 11</span><a href="unit-1/cp11.c">View</a></div>
+<div class="prog"><span>Program 12</span><a href="unit-1/cp12.c">View</a></div>
+<div class="prog"><span>Program 13</span><a href="unit-1/cp13.c">View</a></div>
+<div class="prog"><span>Program 14</span><a href="unit-1/cp14.c">View</a></div>
+<div class="prog"><span>Program 15</span><a href="unit-1/cp15.c">View</a></div>
+
+<div class="prog"><span>Program 16</span><a href="unit-1/cp16.c">View</a></div>
+<div class="prog"><span>Program 17</span><a href="unit-1/cp17.c">View</a></div>
+<div class="prog"><span>Program 18</span><a href="unit-1/cp18.c">View</a></div>
+<div class="prog"><span>Program 19</span><a href="unit-1/cp19.c">View</a></div>
+<div class="prog"><span>Program 20</span><a href="unit-1/cp20.c">View</a></div>
+
+<div class="prog"><span>Program 21</span><a href="unit-1/cp21.c">View</a></div>
+<div class="prog"><span>Program 22</span><a href="unit-1/cp22.c">View</a></div>
+<div class="prog"><span>Program 23</span><a href="unit-1/cp23.c">View</a></div>
+<div class="prog"><span>Program 24</span><a href="unit-1/cp24.c">View</a></div>
+<div class="prog"><span>Program 25</span><a href="unit-1/cp25.c">View</a></div>
+
+<div class="prog"><span>Program 26</span><a href="unit-1/cp26.c">View</a></div>
+<div class="prog"><span>Program 27</span><a href="unit-1/cp27.c">View</a></div>
+<div class="prog"><span>Program 28</span><a href="unit-1/cp28.c">View</a></div>
+<div class="prog"><span>Program 29</span><a href="unit-1/cp29.c">View</a></div>
+<div class="prog"><span>Program 30</span><a href="unit-1/cp30.c">View</a></div>
+
+    <!-- Same pattern till Program 30 -->
+
 </div>
 
-<div class="prog">
-    <span>Program 2</span>
-    <a href="unit-1/cp2.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 3</span>
-    <a href="unit-1/cp3.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 4</span>
-    <a href="unit-1/cp4.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 5</span>
-    <a href="unit-1/cp5.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 6</span>
-    <a href="unit-1/cp6.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 7</span>
-    <a href="unit-1/cp7.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 8</span>
-    <a href="unit-1/cp8.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 9</span>
-    <a href="unit-1/cp9.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 10</span>
-    <a href="unit-1/cp10.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 11</span>
-    <a href="unit-1/cp11.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 12</span>
-    <a href="unit-1/cp12.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 13</span>
-    <a href="unit-1/cp13.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 14</span>
-    <a href="unit-1/cp14.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 15</span>
-    <a href="unit-1/cp15.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 16</span>
-    <a href="unit-1/cp16.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 17</span>
-    <a href="unit-1/cp17.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 18</span>
-    <a href="unit-1/cp18.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 19</span>
-    <a href="unit-1/cp19.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 20</span>
-    <a href="unit-1/cp20.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 21</span>
-    <a href="unit-1/cp21.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 22</span>
-    <a href="unit-1/cp22.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 23</span>
-    <a href="unit-1/cp23.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 24</span>
-    <a href="unit-1/cp24.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 25</span>
-    <a href="unit-1/cp25.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 26</span>
-    <a href="unit-1/cp26.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 27</span>
-    <a href="unit-1/cp27.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 28</span>
-    <a href="unit-1/cp28.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 29</span>
-    <a href="unit-1/cp29.c">View Code</a>
-</div>
-
-<div class="prog">
-    <span>Program 30</span>
-    <a href="unit-1/cp30.c">View Code</a>
-</div>
 <a href="../index.html" class="back">⬅ Back to Units</a>
 
 </body>
