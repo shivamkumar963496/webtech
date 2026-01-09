@@ -2,16 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-<!-- SEO -->
-<meta name="description" content="Shivam Kumar Portfolio | Web Developer & C Programmer">
-<meta name="keywords" content="Shivam Kumar, Web Developer, C Programmer, HTML, CSS, Portfolio">
-<meta name="author" content="Shivam Kumar">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Shivam Kumar | Portfolio</title>
 
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -19,34 +12,29 @@
     --bg:#0f2027;
     --card:#1e293b;
     --text:#ffffff;
-    --accent:#00f7ff;
 }
 body.light{
     --bg:#f4f7fb;
     --card:#ffffff;
     --text:#111;
-    --accent:#0077ff;
 }
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI', sans-serif;
+    font-family:'Segoe UI',sans-serif;
+}
+
+/* remove underline */
+a,a:hover,a:focus{
+    text-decoration:none;
+    color:inherit;
 }
 
 body{
     background:var(--bg);
     color:var(--text);
-    transition:.4s;
-}
-
-a{ text-decoration:none; color:inherit; }
-
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
 }
 
 /* LOADER */
@@ -55,93 +43,86 @@ a{ text-decoration:none; color:inherit; }
     inset:0;
     background:#000;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     z-index:9999;
 }
 .spinner{
     width:60px;
     height:60px;
     border:6px solid #333;
-    border-top:6px solid var(--accent);
+    border-top:6px solid #00f7ff;
     border-radius:50%;
     animation:spin 1s linear infinite;
 }
-@keyframes spin{
-    100%{ transform:rotate(360deg); }
-}
+@keyframes spin{100%{transform:rotate(360deg);}}
 
 /* HEADER */
 header{
     position:fixed;
-    width:100%;
     top:0;
+    width:100%;
     background:#111;
     z-index:100;
 }
-body.light header{ background:#fff; }
-
 .nav{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:15px 0;
 }
-
-.logo span{ color:var(--accent); }
-
-header ul{
+.logo span{color:#00f7ff;}
+ul{
     list-style:none;
     display:flex;
-    gap:20px;
+    gap:15px;
+    align-items:center;
 }
 
-header ul li a{
-    position:relative;
-}
-header ul li a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-5px;
-    width:0;
-    height:2px;
-    background:var(--accent);
-    transition:.3s;
-}
-header ul li a:hover::after{ width:100%; }
-
+/* 3D BUTTONS */
 .btn{
-    padding:10px 25px;
+    padding:12px 26px;
     border-radius:30px;
-    background:linear-gradient(135deg,var(--accent),#0077ff);
     color:#fff;
     font-weight:bold;
+    display:inline-block;
+    background:linear-gradient(135deg,#ff512f,#dd2476);
+    box-shadow:0 6px 0 #b91c1c,0 12px 25px rgba(0,0,0,.4);
+    transition:.2s;
+}
+.btn:hover{transform:translateY(-3px);}
+.btn:active{transform:translateY(4px);}
+.btn.blue{background:linear-gradient(135deg,#00c6ff,#0072ff);}
+.btn.green{background:linear-gradient(135deg,#00b09b,#96c93d);}
+.btn.orange{background:linear-gradient(135deg,#ff8008,#ffc837);}
+
+.toggle{
+    cursor:pointer;
+    font-size:20px;
+    color:#00f7ff;
 }
 
-.toggle{ cursor:pointer; }
-
 /* SECTIONS */
-section{ padding:90px 0; }
-.hero{ padding-top:150px; }
-
+section{padding:100px 0;}
+.hero{padding-top:160px;}
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
 .hero-content{
     display:flex;
     justify-content:space-between;
     align-items:center;
     flex-wrap:wrap;
 }
-
 .hero img{
-    width:250px;
+    width:260px;
     border-radius:50%;
-    box-shadow:0 0 30px var(--accent);
-}
-
-.section-title{
-    text-align:center;
-    font-size:32px;
-    margin-bottom:25px;
+    box-shadow:0 0 35px #00f7ff;
 }
 
 /* SKILLS */
@@ -152,50 +133,63 @@ section{ padding:90px 0; }
 }
 .skills-grid div{
     background:var(--card);
-    padding:15px;
-    border-radius:10px;
+    padding:18px;
+    border-radius:12px;
     text-align:center;
 }
 
 /* PROJECTS */
 .project-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
     gap:20px;
 }
 .card a{
     display:block;
-    padding:30px;
-    border-radius:16px;
-    background:linear-gradient(135deg,#ff512f,#dd2476);
-    font-weight:bold;
+    padding:35px;
+    border-radius:18px;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    box-shadow:0 8px 0 #4c1d95;
     text-align:center;
+    font-weight:bold;
 }
 
-/* CONTACT FORM */
-form{
-    max-width:500px;
-    margin:20px auto;
+/* CONTACT */
+.contact-box{
+    max-width:420px;
+    margin:30px auto;
+    background:var(--card);
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+.contact-item{
     display:flex;
-    flex-direction:column;
-    gap:15px;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    font-size:18px;
+    margin-bottom:18px;
 }
-input,textarea{
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    outline:none;
+.contact-item i{
+    font-size:22px;
+    color:#00f7ff;
 }
-textarea{ resize:none; height:120px; }
+.btn.whatsapp{
+    background:linear-gradient(135deg,#25D366,#128C7E);
+    box-shadow:0 6px 0 #0f5132,0 14px 30px rgba(0,0,0,.4);
+}
 
 /* SOCIAL */
 .social{
-    margin-top:15px;
+    text-align:center;
+    margin-top:20px;
 }
 .social a{
-    font-size:22px;
-    margin:0 10px;
-    color:var(--accent);
+    font-size:26px;
+    margin:0 12px;
+    color:#00f7ff;
 }
 
 /* FOOTER */
@@ -204,43 +198,28 @@ footer{
     padding:20px;
     background:#111;
 }
-body.light footer{ background:#ddd; }
-
-/* SCROLL ANIMATION */
-.reveal{
-    opacity:0;
-    transform:translateY(40px);
-    transition:.8s;
-}
-.reveal.active{
-    opacity:1;
-    transform:translateY(0);
-}
 
 /* RESPONSIVE */
 @media(max-width:768px){
-    .hero-content{ text-align:center; }
-    .hero img{ margin-top:25px; }
+    .hero-content{text-align:center;}
+    .hero img{margin-top:30px;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- LOADER -->
-<div id="loader">
-    <div class="spinner"></div>
-</div>
+<div id="loader"><div class="spinner"></div></div>
 
 <header>
-<div class="container nav">
+<div class="nav">
     <h2 class="logo">Shivam<span>.</span></h2>
     <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact" class="btn">Contact</a></li>
+        <li><a class="btn blue" href="#home">Home</a></li>
+        <li><a class="btn green" href="#about">About</a></li>
+        <li><a class="btn orange" href="#skills">Skills</a></li>
+        <li><a class="btn blue" href="#projects">Projects</a></li>
+        <li><a class="btn green" href="#contact">Contact</a></li>
         <li class="toggle" onclick="toggleTheme()">
             <i class="fa-solid fa-circle-half-stroke"></i>
         </li>
@@ -248,111 +227,108 @@ body.light footer{ background:#ddd; }
 </div>
 </header>
 
-<section class="hero reveal" id="home">
+<!-- HERO -->
+<section class="hero" id="home">
 <div class="container hero-content">
     <div>
-        <h1>Hello, I'm <span style="color:var(--accent)">Shivam Kumar</span></h1>
-        <h3><span id="typing"></span></h3>
-        <p>I build colourful, modern & responsive websites.</p><br>
-        <a href="#projects" class="btn">Explore Work</a>
-        <a href="resume.pdf" download class="btn">Download Resume</a>
+        <h1>Hello, I'm <span style="color:#00f7ff">Shivam Kumar</span></h1>
+        <h3 id="typing"></h3><br>
+        <a class="btn blue" href="#projects">Explore Work</a>
+        <a class="btn green" href="resume.pdf" download>Download Resume</a>
     </div>
     <img src="profile.png" alt="Shivam Kumar">
 </div>
 </section>
 
-<section id="about" class="reveal">
+<!-- ABOUT -->
+<section id="about">
 <div class="container">
-    <h2 class="section-title">About Me</h2>
-    <p>I am a passionate web developer who loves creating modern & professional websites.</p>
+<h2>About Me</h2>
+<p>I create modern, colourful & responsive websites.</p>
 </div>
 </section>
 
-<section id="skills" class="reveal">
+<!-- SKILLS -->
+<section id="skills">
 <div class="container">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills-grid">
-        <div>HTML5</div>
-        <div>CSS3</div>
-        <div>Responsive Design</div>
-        <div>C Programming</div>
-        <div>JavaScript (Basic)</div>
-    </div>
+<h2>Skills</h2>
+<div class="skills-grid">
+<div>HTML5</div>
+<div>CSS3</div>
+<div>JavaScript</div>
+<div>C Programming</div>
+<div>Responsive Design</div>
+</div>
 </div>
 </section>
 
-<section id="projects" class="reveal">
+<!-- PROJECTS -->
+<section id="projects">
 <div class="container">
-    <h2 class="section-title">Projects</h2>
-    <div class="project-grid">
-        <div class="card"><a href="linkhub/index.html" target="_blank">LinkHub Website</a></div>
-        <div class="card"><a href="#">C Programs Collection</a></div>
-        <div class="card"><a href="#">Portfolio Website</a></div>
-    </div>
+<h2>Projects</h2>
+<div class="project-grid">
+<div class="card"><a href="linkhub/index.html" target="_blank">LinkHub</a></div>
+<div class="card"><a href="#">My Achievements</a></div>
+<div class="card"><a href="#">Coming Soon</a></div>
+</div>
 </div>
 </section>
 
-<section id="contact" class="reveal">
-<div class="container contact-box">
-    <h2 class="section-title">Contact Me</h2>
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<h2>Contact Me</h2>
 
-    <!-- CONTACT FORM -->
-    <form action="mailto:shivamtoda9634@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="Name" placeholder="Your Name" required>
-        <input type="email" name="Email" placeholder="Your Email" required>
-        <textarea name="Message" placeholder="Your Message"></textarea>
-        <button class="btn" type="submit">Send Message</button>
-    </form>
-
-    <div class="social">
-        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+<div class="contact-box">
+    <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <span>shivamtoda9634@gmail.com</span>
     </div>
+
+    <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <span>+91 96348 58916</span>
+    </div>
+
+    <a href="https://wa.me/919634858916" target="_blank" class="btn whatsapp">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+    </a>
+</div>
+
+<div class="social">
+<a href="#"><i class="fab fa-github"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+</div>
 </div>
 </section>
 
-<footer>
-© 2025 Shivam Kumar | Designed with ❤️
-</footer>
+<footer>© 2025 Shivam Kumar</footer>
 
 <script>
-/* LOADER */
-window.onload=()=>{
-    document.getElementById("loader").style.display="none";
-};
+window.onload=()=>{document.getElementById("loader").style.display="none";}
 
-/* DARK/LIGHT */
 function toggleTheme(){
     document.body.classList.toggle("light");
 }
 
-/* SCROLL REVEAL */
-const reveals=document.querySelectorAll(".reveal");
-window.addEventListener("scroll",()=>{
-    reveals.forEach(r=>{
-        if(r.getBoundingClientRect().top < window.innerHeight-100){
-            r.classList.add("active");
-        }
-    });
-});
-
-/* TYPING ANIMATION */
+/* typing animation */
 const text=["Web Developer","C Programmer","Frontend Designer"];
 let i=0,j=0;
+const typing=document.getElementById("typing");
 function type(){
-    if(j<text[i].length){
-        typing.innerHTML+=text[i][j++];
-        setTimeout(type,100);
-    }else setTimeout(erase,1500);
+ if(j<text[i].length){
+  typing.innerHTML+=text[i][j++];
+  setTimeout(type,100);
+ }else setTimeout(erase,1500);
 }
 function erase(){
-    if(j>0){
-        typing.innerHTML=text[i].substring(0,--j);
-        setTimeout(erase,50);
-    }else{
-        i=(i+1)%text.length;
-        setTimeout(type,500);
-    }
+ if(j>0){
+  typing.innerHTML=text[i].substring(0,--j);
+  setTimeout(erase,50);
+ }else{
+  i=(i+1)%text.length;
+  setTimeout(type,400);
+ }
 }
 type();
 </script>
