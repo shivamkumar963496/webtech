@@ -1,27 +1,35 @@
-/*Program 8: Sum of Digits using Function*/
+/* Program 8: Sum of Digits using Function
+   Ye program function ka use karke
+   kisi number ke saare digits ka sum nikalta hai
+*/
 
-#include <stdio.h>
+#include <stdio.h>   // Input-output ke liye header file
 
-// यह function number के digits का sum निकालता है
+// Ye function number ke digits ka sum calculate karta hai
 int sumDigits(int n)
 {
-    int sum = 0;
+    int sum = 0;   // Digits ka sum store karne ke liye variable
 
-    // जब तक number 0 न हो जाए
+    // Jab tak number 0 nahi ho jata
     while(n > 0)
     {
-        // last digit जोड़ना
+        // n % 10 se last digit nikal rahe hain aur sum me add kar rahe hain
         sum = sum + (n % 10);
 
-        // last digit हटाना
+        // n / 10 karke last digit remove kar rahe hain
         n = n / 10;
     }
 
+    // Final sum return kar rahe hain
     return sum;
 }
 
 int main()
 {
+    // sumDigits(1234) function call kar rahe hain
+    // 1 + 2 + 3 + 4 = 10 print hoga
     printf("Sum of digits = %d", sumDigits(1234));
+
+    // Program end
     return 0;
 }
