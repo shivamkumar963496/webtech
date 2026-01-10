@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 720px;
+    height: 80px;
+    background-color: yellow;
+    margin: 0 auto;
+    border-width: 5px;
+    border-color: red;
+    border-style: solid;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section{
+    width: 720px;
+    height: 400px;
+    border-width: 5px;
+    border-color: red;
+    border-style: solid;
+    margin: 0 auto;
+}
+
+footer{
+    width: 720px;
+    height: 80px;
+    background-color: yellow;
+    margin: 0 auto;
+    border-width: 5px;
+    border-color: red;
+    border-style: solid;
+    border-top: none;
+        display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#uploadbtn{
+    height: 40px;
+    width: 100px;
+    position: relative;
+
+}
+
+#filebtn{
+    height: 40px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+}
+
+#play{
+    height: 40px;
+    width: 100px;
+}
+
+#pouse{
+    height: 40px;
+    width: 100px;
+}

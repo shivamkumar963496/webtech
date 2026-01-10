@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1> SHIVAM VIDEO PLAYER</h1>
+    </header>
+
+
+    <section>
+        <video src="tom.mp4" width="100%" height="390px" id="vdo"></video>
+    </section>
+
+
+    <footer>
+        <button id="uploadbtn"> UPLOAD
+            <input type="file" accept=".mp4" id="filebtn" onchange="upload()">
+        </button>
+
+        <button id="play" onclick="vplay()">PLAY</button>
+        <button id="pouse" onclick="vpouse()">POUSE</button>
+
+    </footer>
+
+
+    <script>
+        function vplay() {
+            var a = document.getElementById("vdo");
+            a.play();
+        }
+
+        function vpouse() {
+            var a = document.getElementById("vdo");
+            a.pause();
+        }
+
+        function upload() {
+            var a = document.getElementById("filebtn").value.replace(/.*(\/|\\)/, '');
+            var b = document.getElementById("vdo");
+            b.src = a;
+        }
+
+    </script>
+</body>
+
+</html>
