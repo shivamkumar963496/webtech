@@ -1,0 +1,97 @@
+#box{
+    width: 400px;
+    height: 350px;
+    border-width: 20px;
+    border-color: red;
+    border-style: groove;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: #333;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#myname{
+width: 400px;
+height: 40px;
+border-width: 5px;
+border-color: red;
+border-style: dotted;
+margin: 0 auto;
+margin-top: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: Algerian;
+color: rgb(193, 8, 8);
+font-size: 30px;
+font-weight: bold;
+}
+
+#answerbox{
+    width: 350px;
+    height: 40px;
+    border-width: 5px;
+    border-color: red;
+    border-style: solid;
+    margin: 0 auto;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: sans-serif;
+    font-weight: bold;
+
+}
+
+
+#frist{
+    width: 150px;
+    height: 40px;
+    border-width: 5px;
+    border-color: red;
+    border-style: solid;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#second{
+    width: 150px;
+    height: 40px;
+    border-width: 5px;
+    border-color: red;
+    border-style: solid;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+#form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:10px;
+    margin-top:50px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+button{
+    padding:12px;
+    font-size:16px;
+    background:#333;
+    color:white;
+    border:none;
+    cursor:pointer;
+}

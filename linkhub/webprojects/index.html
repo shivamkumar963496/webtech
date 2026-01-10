@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="myname">SHIVAM KUMAR</div>
+    <div id="box">
+<div id="answerbox" >YOUR ANSWER =  </div>
+<form id="form">
+    <input type="text" id="frist" placeholder="FRIST NUMBER">
+    <br>
+    <input type="text" id="second" placeholder="SECOND NUMBER">
+</form>
+
+ <div class="buttons">
+        <button onclick="add()">Add (+)</button>
+        <button onclick="sub()">Subtract (-)</button>
+        <button onclick="mul()">Multiply (x)</button>
+        <button onclick="div()">Divide (/)</button>
+        <button onclick="mod()">Reminder (%)</button>
+        <button onclick="reset()">Reset</button>
+    </div>
+
+
+    </div>
+
+
+    <script>
+function add()
+{
+    let a= Number(document.getElementById("frist").value);
+    let b= Number(document.getElementById("second").value);
+    let c= document.getElementById("answerbox").innerText="YOUR ANSWER="+(a+b);
+}
+
+function sub()
+{
+     let a= Number(document.getElementById("frist").value);
+    let b= Number(document.getElementById("second").value);
+    let c= document.getElementById("answerbox").innerText="YOUR ANSWER="+(a-b);
+}
+
+function mul()
+{
+     let a= Number(document.getElementById("frist").value);
+    let b= Number(document.getElementById("second").value);
+    let c= document.getElementById("answerbox").innerText="YOUR ANSWER="+(a*b);
+}
+
+function div()
+{
+     let a= Number(document.getElementById("frist").value);
+    let b= Number(document.getElementById("second").value);
+    let c= document.getElementById("answerbox").innerText="YOUR ANSWER="+(a/b);
+}
+
+function mod()
+{
+     let a= Number(document.getElementById("frist").value);
+    let b= Number(document.getElementById("second").value);
+    let c= document.getElementById("answerbox").innerText="YOUR ANSWER="+(a%b);
+}
+
+function reset()
+{
+     let a= document.getElementById("frist").value="";
+    let b= document.getElementById("second").value="";
+    let c= document.getElementById("answerbox").innerText="YOUR ANSWER=??";
+}
+        
+    </script>
+</body>
+</html>
