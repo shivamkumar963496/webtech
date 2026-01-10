@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Card Generator</title>
+
+    <style>
+        body{
+            font-family: Arial;
+        }
+        #card{
+            margin-top: 20px;
+            padding: 15px;
+            width: 300px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background:yellow;
+        }
+        h1{
+            color: red;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+<center>
+    <h1>CUSTOMER CARD GENERATOR</h1>
+    <hr>
+
+    <h2>YOUR DETAILS</h2>
+    <input type="text" id="name" placeholder="Full Name"><br><br>
+    <input type="email" id="email" placeholder="Email"><br><br>
+    <input type="number" id="number" placeholder="Mobile Number"><br><br>
+    <input type="text" id="father" placeholder="Father Name"><br><br>
+    <input type="text" id="address" placeholder="Address"><br><br>
+
+    <button onclick="skt()">Generate Card</button>
+
+    <div id="card"></div>
+</center>
+    <script>
+        function skt() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let number = document.getElementById("number").value;
+            let father = document.getElementById("father").value;
+            let address = document.getElementById("address").value;
+
+            document.getElementById("card").innerHTML = `
+                <h3>${name}</h3>
+                <p><b>Email:</b> ${email}</p>
+                <p><b>Mobile:</b> ${number}</p>
+                <p><b>Father:</b> ${father}</p>
+                <p><b>Address:</b> ${address}</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>
